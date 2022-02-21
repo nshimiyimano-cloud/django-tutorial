@@ -1,0 +1,15 @@
+ sudo apt install python3.8
+
+  sudo apt install python-pip to use pip
+
+ python -m pip install django or pip inst django
+
+ 
+ python -m django   startproject django_course_site 
+ python3 -m venv django_course_env
+  source django_course_env/bin/activate        to activate env to workoing with in django
+(django_course_env) lab@lab-Inspiron-5559:~/Desktop/learn/learndjango/django_course_site$ 
+
+
+
+apt-get install python3-venv  
