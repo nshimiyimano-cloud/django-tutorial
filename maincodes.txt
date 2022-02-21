@@ -13,3 +13,17 @@
 
 
 apt-get install python3-venv  
+
+
+git
+
+first go in vscode search git for initialise git after add remote next if you aforced to allow github click allow after paste token you have given then push
+second if u enforced to confugure username and email do like the following setting in terminal
+
+git config --global user.name "nshimiyimano-cloud"
+git config --global user.email njeanluc828@gmail.com  after to see all settings about git run:
+ git config --list --show-origin
+
+
+
+
