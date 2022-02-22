@@ -23,6 +23,9 @@ second if u enforced to confugure username and email do like the following setti
 git config --global user.name "nshimiyimano-cloud"
 git config --global user.email njeanluc828@gmail.com  after to see all settings about git run:
  git config --list --show-origin
+ 2022001849
+ pass:2018_98_Lc
+ hank you for applying to study at University of Kigali. Your application has been received by the office of the registrar. We will get back to you shortly
 
 
 
