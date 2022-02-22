@@ -28,5 +28,6 @@ git config --global user.email njeanluc828@gmail.com  after to see all settings 
  hank you for applying to study at University of Kigali. Your application has been received by the office of the registrar. We will get back to you shortly
 
 
-
+so when you create template eg template/meetups/index.html never the folder is relative here its from render(request,'meetups/index.html')
+by default static html to be returned in view is kept by default in template folder
 
