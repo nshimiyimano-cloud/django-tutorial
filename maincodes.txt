@@ -31,3 +31,6 @@ git config --global user.email njeanluc828@gmail.com  after to see all settings 
 so when you create template eg template/meetups/index.html never the folder is relative here its from render(request,'meetups/index.html')
 by default static html to be returned in view is kept by default in template folder
 
+ 
+so to work with static we need to use django feature called static where search for static folder and take as it have css javascript that why they say django is batteries included  always u need to create static folder in root of ur app or module u have created and repeat ur app name inside static to prevent from crashing of app(as unique)  eg static/meetups/styles or script folder for js
+
