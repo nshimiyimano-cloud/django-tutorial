@@ -48,3 +48,10 @@ so to work with static we need to use django feature called static where search 
  extend
  block
  load static
+
+
+ Data types
+  temporary data                                                  semi-persistent data                                                      persistent data 
+
+
+
