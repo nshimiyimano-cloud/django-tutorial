@@ -44,16 +44,14 @@ def index(request):
 
 def meetup_details(request,meetup_slug):
 
-   print(meetup_slug)
+#remember because its will return one object  not array to use selected_meetups['title or description] no no we will get  it as object property not array index
+   selected_meetup=Meetups.objects.get(slug=meetup_slug)  # its like where slug=meetup_slug
 
-   selected_meetup={
-      "title":"A First Meetup",
-      "description":"This is the first meetup"
-  }
 
    return render(request,"meetups/meetups-details.html",{
       
-      "meetup_title":selected_meetup['title'],
-      "meetup_description":selected_meetup['description']
+      "meetup_title":selected_meetup.title,
+      "meetup_description":selected_meetup.description,
+       "location":selected_meetup.location
       }
       )
