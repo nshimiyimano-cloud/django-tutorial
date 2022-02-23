@@ -41,3 +41,10 @@ so to work with static we need to use django feature called static where search 
 
  we use href="{% url 'meetup_details'  meetup_item.slug %} "  u let space and dynamic path correspond with eg meetup_slug' defined in view and specified in url.py this allow us to get dynamic absolute url in template(x.html) we have define in url.py instead of rewrite again and again we use name of url we specified in url.py on path("/meetups/<slug:meetup_slug>",views.meetup_details,name='meetupp_details')
  .the best of use dynamic path even you change path in url  path('meetups/<slug:meetup_slug>',views.meetup_details,name='meetup-detail')  eg to path('home',..,name='meetup_details') its still work path begin rendered by django when u have used djangotemplating language like this {% url 'name-of-url' datawithrenderddynamically as dynamic path %}
+
+ django templating engine language i m able to use
+
+ include or include '..' with Svariable u want %}
+ extend
+ block
+ load static
