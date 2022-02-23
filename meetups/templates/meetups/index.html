@@ -8,11 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'meetups/styles/basic.css' %}">
+    <link rel="stylesheet" href="{% static 'meetups/styles/all-meetups.css' %}">
 </head>
 <body>
-    <h1>All mietups</h1>
-    <p>hello world</p>
-    <button class="btn">Follow</button>
+
+   
+   
+  
 
     {% if show_meetups %}
      <h2>{{ meetups.0.title }}</h2> <!--and this is interoporation string to get value stored in variable-->
@@ -25,5 +27,55 @@
     {% endif  %}
 
     
+    <header id="main-header">
+        <nav>
+            <a id="main-logo" href="/meetups"> Django meetups</a>
+            
+        </nav>
+        <h1>We got great meetups comming up</h1>
+            <p>find the one of the best suit for you need     </p>
+    </header>
+
+    <main>
+<section>
+    <h2>Upcomming meetups</h2>
+
+    <ol>
+        {% for meetups_item in meetupinmain %}
+
+        <li  class="meetup-item">
+            <article>
+                <div class="meetup-summary">
+                    <div class="meetup-image">
+                        <img src="">
+                    </div>
+
+                    <div class="meetup-details">
+
+                        <h1>{{ meetups_item.title }}</h1>
+                        
+                        <address>  {{ meetups_item.location }}  </address>
+                    </div>
+                </div>
+
+            <div class="meetup-actions">
+                <a href="" class="btn">More Details</a>
+            </div>
+            </article>
+
+
+        </li>
+
+
+
+
+
+        {% endfor %}
+
+
+    </ol>
+</section>
+
+    </main>
 </body>
 </html>
