@@ -1,42 +1,28 @@
+{% extends 'meetups/base/base.html' %}
+
 {% load static %}  <!---to enable static feature-->
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'meetups/styles/basic.css' %}">
-    <link rel="stylesheet" href="{% static 'meetups/styles/all-meetups.css' %}">
-</head>
-<body>
+{% block title %}All Meetups  {% endblock %} <!--to override title of base-->
+
+
+{% block site_css %}
+<link rel="stylesheet" href="{% static 'meetups/styles/all-meetups.css' %}">
+ {% endblock %}
+
+ {% block main_heading %}
+ We got great meetups comming up
+ {% endblock %}
+
+
+ {% block header_content %}
+<p> find the one of the best suit for you need </p>
+     {% endblock %}   
 
    
-   
-  
 
-    {% if show_meetups %}
-     <h2>{{ meetups.0.title }}</h2> <!--and this is interoporation string to get value stored in variable-->
 
-        {% for meetups_item in meetups  %}</p>
-         {{ meetups_item.title }}
-         {% endfor %}
-    {% else %}
-      <p>no Meetups found</p>
-    {% endif  %}
+{% block body %}
 
-    
-    <header id="main-header">
-        <nav>
-            <a id="main-logo" href="/meetups"> Django meetups</a>
-            
-        </nav>
-        <h1>We got great meetups comming up</h1>
-            <p>find the one of the best suit for you need     </p>
-    </header>
-
-    <main>
 <section>
     <h2>Upcomming meetups</h2>
 
@@ -76,6 +62,10 @@
     </ol>
 </section>
 
-    </main>
+{% endblock%}
+
+
+
+    
 </body>
 </html>

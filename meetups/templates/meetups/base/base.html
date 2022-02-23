@@ -1,0 +1,45 @@
+{% load static %}  <!---to enable static feature-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %} My Meetups  {% endblock %} </title>  <!-- here is to define defauld title and block of title will be overwrite if is necessary to get d#nt title-->
+    <link rel="stylesheet" href="{% static 'meetups/styles/basic.css' %}">
+    {% block site_css %}{% endblock %} <!--if its come necessary to return d#nt css becouse all template css is not the same-->
+</head>
+<body>
+
+   
+   
+  
+
+    {% if show_meetups %}
+     <h2>{{ meetups.0.title }}</h2> <!--and this is interoporation string to get value stored in variable is is pure python done like this meetups[0]['title']-->
+
+        {% for meetups_item in meetups  %}</p>
+         {{ meetups_item.title }}
+         {% endfor %}
+    {% else %}
+      <p>no Meetups found</p>
+    {% endif  %}
+
+    
+    <header id="main-header">
+        <nav>
+            <a id="main-logo" href="/meetups"> Django meetups</a>
+            
+        </nav>
+        <h1>{% block main_heading %}{% endblock %}</h1>  <!--and here we can specify default heading message-->
+            {% block header_content %}{% endblock %}      <!--and here paragraph content will be injected dynamically-->
+    </header>
+
+    <main>
+        {% block body %}
+        {% endblock %} 
+
+    </main>
+</body>
+</html>
