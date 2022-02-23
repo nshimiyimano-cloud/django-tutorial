@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Meetups
 
 # Create your views here.
 def index(request):
@@ -14,19 +15,23 @@ def index(request):
    ]
 
 
-   meetupsinmain=[
-      {
-         "title":"A first Meetups",
-         "location":"new york",
-         "slug":"a-first-meetups"
-         },
+  # meetupsinmain=[
+     # {
+         #"title":"A first Meetups",
+        # "location":"new york",
+        # "slug":"a-first-meetups"
+        # },
 
-      {
-         "title": "A second meetups",
-         "location":"paris",
-         "slug":"a-second-meetupos"
-         }
-   ]
+     # {
+         #"title": "A second meetups",
+        # "location":"paris",
+         #"slug":"a-second-meetupos"
+         #}
+  # ]
+
+
+   meetupsinmain=Meetups.objects.all()
+
    
 
    return render(request,'meetups/index.html',{
