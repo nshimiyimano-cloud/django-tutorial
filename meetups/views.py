@@ -1,3 +1,4 @@
+from tkinter.messagebox import RETRY
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -34,3 +35,16 @@ def index(request):
       "meetups":meetups,
       "meetupinmain":meetupsinmain
    })
+
+
+
+   def meetup_details(request):
+      selected_meetup={
+         "title":"A First Meetup",
+         "description":"This is the first meetup"
+      }
+      return render(request,"meetups/meetups-detail.html",{
+         "meetup_title":selected_meetup['title'],
+         "meetup_description":selected_meetup['description']
+
+      })
