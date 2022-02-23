@@ -34,3 +34,7 @@ by default static html to be returned in view is kept by default in template fol
  
 so to work with static we need to use django feature called static where search for static folder and take as it have css javascript that why they say django is batteries included  always u need to create static folder in root of ur app or module u have created and repeat ur app name inside static to prevent from crashing of app(as unique)  eg static/meetups/styles or script folder for js
 . we finish to use our css in template(html) by use django teplating engine at top on html we load static by use {% load static %}  and in css link we put href="{% static 'meetups/stles/basic.css' %}" we dot need to static from static as folder ready known by django
+
+
+# /meetups/<dynamic path segment>   ega-first-meetups as slug
+ path('meetups/<slug:meetup_slug>',views.meetup_details)  to get dynamic url we do like this meetup_slug is 2nd parameter from meetup view on eg meetup_dedail(request,meetup_slug):
