@@ -13,5 +13,17 @@
     <h1>All mietups</h1>
     <p>hello world</p>
     <button class="btn">Follow</button>
+
+    {% if show_meetups %}
+     <h2>{{ meetups.0.title }}</h2> <!--and this is interoporation string to get value stored in variable-->
+
+        {% for meetups_item in meetups  %}</p>
+         {{ meetups_item.title }}
+         {% endfor %}
+    {% else %}
+      <p>no Meetups found</p>
+    {% endif  %}
+
+    
 </body>
 </html>
