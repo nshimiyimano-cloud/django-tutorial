@@ -85,6 +85,7 @@ Migrations for 'meetups':
   meetups/migrations/0002_meetups_title.py
     - Add field title to meetups
 (django_course_env) lab@lab-Inspiron-5559:~/Desktop/learn/learndjango/django_course_site$ 
+i mess on with its work aluayz every where  just locattion because we have't included in db not possible to use it
 
 
 

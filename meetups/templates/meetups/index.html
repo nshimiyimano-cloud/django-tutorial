@@ -29,7 +29,7 @@
     <ol>
         {% for meetups_item in meetupinmain %}
 
-       {% include 'meetups/includes/meetup-item.html'  with  location='New york' %}  <!--here becouse is from database we not possible to create variable to use in list we stay location with default string value-->
+       {% include 'meetups/includes/meetup-item.html'  with title=meetups_item.title location=meetups_item.location %}
 
 
         {% endfor %}
