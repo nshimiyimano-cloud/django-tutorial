@@ -1,3 +1,4 @@
+from ast import Try
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Meetups
@@ -43,15 +44,21 @@ def index(request):
 
 
 def meetup_details(request,meetup_slug):
-
-#remember because its will return one object  not array to use selected_meetups['title or description] no no we will get  it as object property not array index
-   selected_meetup=Meetups.objects.get(slug=meetup_slug)  # its like where slug=meetup_slug
-
-
-   return render(request,"meetups/meetups-details.html",{
-      
-      "meetup_title":selected_meetup.title,
-      "meetup_description":selected_meetup.description,
-       "location":selected_meetup.location
-      }
+   try:
+      #remember because its will return one object  not array to use selected_meetups['title or description] no no we will get  it as object property not array index
+       selected_meetup=Meetups.objects.get(slug=meetup_slug)  # its like where slug=meetup_slug
+       return render(request,"meetups/meetups-details.html",{
+         "meetup_found":False,
+         "meetup_title":selected_meetup.title,
+         "meetup_description":selected_meetup.description,
+         "location":selected_meetup.location
+         }
       )
+
+      
+   except Exception as exc:
+       return render(request,"meetups/meetups-details.html",{
+          "meetup_found":False   
+
+       })
+
