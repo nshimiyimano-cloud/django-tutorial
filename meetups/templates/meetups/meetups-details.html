@@ -1,42 +1,59 @@
+{% extends 'meetups/base/base.html' %}
+
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ meetup_title }}</title>
+{% block title %}
 
-    <link rel="stylesheet" href="{% static 'meetups/styles/basic.css' %}">
-    <link rel="stylesheet" href="{% static 'meetups/styles/meetup-details.css' %}">
-</head>
-<body>
-    <main>
-     <article>
-         <img src="" alt="">
-        <section id="location">
-            <h2>Meetup Details</h2>
-            <address>This Meetups takes place in   <span>LOCATION</span>(ADDRESS).</address>
-            
-        </section>
+{{ meetup_title }}
 
-        <section id="details">
-            <h2>What's thiseetup About</h2>
-            <p>{{ meetupd_description }}</p>
+{% endblock %}
+
+{% block site_css %}
+<link rel="stylesheet" href="{% static 'meetups/styles/meetup-details.css' %}">
+{% endblock %}
 
 
-            <footer>
-                <p>Need more details? please <a href="">Contact the organizer (but don't spam us;-))</a></p>
-            </footer>
-            
-        </section>
+{% block main_headding %}
 
-        <section id="registration">
-            <h2>Join Us</h2>
-        </section>
-    </main>
-     </article>
+{{ meetup_title }}
+
+{% endblock %}
+
+
+{% block body %}
+
+
+<article>
+    <img src="" alt="">
+   <section id="location">
+       <h2>Meetup Details</h2>
+       <address>This Meetups takes place in   <span>LOCATION</span>(ADDRESS).</address>
+       
+   </section>
+
+   <section id="details">
+       <h2>What's thiseetup About</h2>
+       <p>{{ meetupd_description }}</p>
+
+
+       <footer>
+           <p>Need more details? please <a href="">Contact the organizer (but don't spam us;-))</a></p>
+       </footer>
+       
+   </section>
+
+   <section id="registration">
+       <h2>Join Us</h2>
+   </section>
+
+</article>
+
+
+
+{% endblock %}
+
+
+
+
     
-</body>
-</html>
+    
