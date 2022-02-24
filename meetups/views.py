@@ -66,7 +66,9 @@ def meetup_details(request,meetup_slug):
          selected_meetup=Meetups.objects.get(slug=meetup_slug)  # its like where slug=meetup_slug
          registration_form=RegistrationForm(request.POST)   
          if registration_form.is_valid():
-            partticipant=registration_form.save()
+           # partticipant=registration_form.save()
+            user_email=registration_form.cleaned_data['email'] # _ its like to say was_create this second param present/determine take status that alredy exist but first param or key its for to use when data there is not exist in database(just its data to be saved in database)
+            partticipant,_=   Participant.objects.get_or_create(email=user_email)
             selected_meetup.participants.add(partticipant) #because if we have selected_mmetup already we have participants here because we have this field in Meetups model in db
             return redirect("confirm-registration")
 

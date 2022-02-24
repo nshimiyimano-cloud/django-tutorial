@@ -170,8 +170,12 @@ location=models.foreignKey(Location,on_delete=Cascade)   here it was in oneto ma
 
 let we see on many to many  relations on Participant model
 
+. Participant.objects.get_or_create(email=user_email)--->get_or_create ccheck in database if data already exist anyway save data if it does not already exist in database
+
+.fitst key participart its where result got be stored because get_or_create do all to retrieve or to create excute one get or create depend on existance of form filed value in database if exists
 
 
+in model if u will have to use save() in view use forms.MofelForm but if not use forms.Forms
 
 
 
