@@ -68,7 +68,7 @@ def meetup_details(request,meetup_slug):
          if registration_form.is_valid():
             partticipant=registration_form.save()
             selected_meetup.participants.add(partticipant) #because if we have selected_mmetup already we have participants here because we have this field in Meetups model in db
-            return redirect("confirm-registration")
+         return redirect("confirm-registration")
 
 
 
