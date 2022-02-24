@@ -44,16 +44,21 @@ def index(request):
 
 
 def meetup_details(request,meetup_slug):
+   
    try:
       #remember because its will return one object  not array to use selected_meetups['title or description] no no we will get  it as object property not array index
        selected_meetup=Meetups.objects.get(slug=meetup_slug)  # its like where slug=meetup_slug
+       print(selected_meetup.image.url) # will be like this /images/dress.jpg
        return render(request,"meetups/meetups-details.html",{
-         "meetup_found":False,
+         "meetup_found":True,
          "meetup_title":selected_meetup.title,
          "meetup_description":selected_meetup.description,
-         "location":selected_meetup.location
+         "location":selected_meetup.location,
+         "image":selected_meetup.image.url
+
          }
       )
+      
 
       
    except Exception as exc:

@@ -130,6 +130,8 @@ after : pip install Pillow
 
 in main url eg from django.conf.urls.static import static after configure serving on server its will work on facing front end
 
+.how django is super:after save image on frontend we are able to access that image by use url:the object django added to help accessing full path of image developer not have to first construct url path of image django do that for us
+
 
 
 
