@@ -92,8 +92,8 @@ def meetup_details(request,meetup_slug):
 
 
 def confirm_registration(request,meetup_slug):
-   meetup= Meetups.objects.get(meetup_slug)
+   meetup= Meetups.objects.get(slug=meetup_slug)  # slug=..is slug field from database here is like where clouse in mysql where slug=meetup_slug
    return render(request,'meetups/registration-success.html',{      # we do this because succes page come for this function plays role there
-      "organizer_email":meetup.organizer_email
+      "organizer_email": meetup.organizer_email
    }) 
 
