@@ -8,3 +8,4 @@ class Meetups(models.Model):
     #this django slugField adheres slug format
     slug=models.SlugField(unique=True)   
     description=models.TextField()
+    image=models.ImageField(upload_to="images")

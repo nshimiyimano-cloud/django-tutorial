@@ -134,3 +134,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#folder in our root of our project suppose u want folder of pdf file ,images this will be root of those subfolder
+
+MEDIA_ROOT=BASE_DIR+"/uploads"   
+MEDI_URL='/files/'     #url from server you will see in browser eg http://localhost:8000/files/... or inarwa.com/uplodedfiles/..

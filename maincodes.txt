@@ -91,5 +91,43 @@ i mess on with its work aluayz every where  just locattion because we have't inc
 https://www.sodapdf.com/word-to-pdf/ quick link to convert word to pdf online
 
 
+if u start to use image Upload in modal or in django u will see error NameError: name 'upload_to' is not defined, django.core.management.base.SystemCheckError: SystemCheckError: System check identified some issues:
+ERRORS:The headers or library files could not be found for jpeg,
+    a required dependency when compiling Pillow from source.
+    
+
+meetups.Meetups.image: (fields.E210) Cannot use ImageField because Pillow is not installed.
+	HINT: Get Pillow at https://pypi.org/project/Pillow/ or run command "python -m pip install Pillow".
+
+
+
+->SOLUTION: here to fix it we need to install pillow in our system or in our virtual environment
+so PILLAW  package Django will user under the hood when working with images
+
+
+second question if you told  
+
+The headers or library files could not be found for jpeg,
+    a required dependency when compiling Pillow from source.
+    
+
+    run these two command works very well  
+
+    (django_course_env) lab@lab-Inspiron-5559:~/Desktop/learn/learndjango/django_course_site$ sudo apt-get install libjpeg-dev zlib1g-dev
+[sudo] password for lab: 
+viously unselected package libjpeg-dev:amd64.
+Preparing to unpack .../libjpeg-dev_8c-2ubuntu8_amd64.deb ...
+succesfully ...
+
+
+
+
+after : pip install Pillow
+
+
+
+
+
+
 
 
