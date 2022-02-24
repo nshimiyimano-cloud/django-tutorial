@@ -165,6 +165,10 @@ prepopulated_fields={'slug':('title',)}
 
 
 we gonna change loaction by adding Location model which we will map to Meetups model by use relation manyTomany,...
+location=models.foreignKey(Location,on_delete=Cascade)   here it was in oneto many relationship  
+
+
+let we see on many to many  relations on Participant model
 
 
 

@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import Meetups,Location
+from .models import Meetups,Location,Participant
 
 class MeetupAdmin(admin.ModelAdmin):
-    list_display=('title','slug')
-    list_filter=('title','location',)
+    list_display=('title','date','location')
+    list_filter=('title','date',)
     prepopulated_fields={'slug':('title',)}
 
 
@@ -11,3 +11,4 @@ class MeetupAdmin(admin.ModelAdmin):
 
 admin.site.register(Meetups,MeetupAdmin)
 admin.site.register(Location)
+admin.site.register(Participant)
