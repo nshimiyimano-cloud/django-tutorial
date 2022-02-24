@@ -133,6 +133,34 @@ in main url eg from django.conf.urls.static import static after configure servin
 .how django is super:after save image on frontend we are able to access that image by use url:the object django added to help accessing full path of image developer not have to first construct url path of image django do that for us
 
 
+.so if you want you can override admin interface with your customization that you want  u are able even styling 
+
+eg if we want to change this before object name have created :
+MEETUPS
+	Meetups object (2)
+	Meetups object (1)
+2 meetupss
+
+we can change that  Meetups object (2) or Meetups object (2) by override str will be displayed in our Meetups model class eg def __str__():
+                                                                                                                                 return ...in how looks we want
+
+
+override lookig of list display in admin interface done in admin.py
+
+class MeetupAdmin(admin.ModelAdmin):
+    list_display=('title','slug')
+# Register your models here.
+
+admin.site.register(Meetups,MeetupAdmin)
+
+after instead of see titleslug together we will see clear table of two columns with header title              slug
+                                                                                            mmmmm              mm-nnn-j
+. and other django has built in filter eg list_filter=('title',) remember to let , to be taken as tuple type 
+-->so after this django will bring FILTER sidebar in the top corner
+
+
+
+
 
 
 
