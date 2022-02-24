@@ -158,6 +158,15 @@ after instead of see titleslug together we will see clear table of two columns w
 . and other django has built in filter eg list_filter=('title',) remember to let , to be taken as tuple type 
 -->so after this django will bring FILTER sidebar in the top corner
 
+.next how to implement prepopulated based on other field value inputted eg on slug must based on title by how you fill title input and automatically filled in slug input
+as how is in wolf cms slug all implemented in admin.py file  eg:
+
+prepopulated_fields={'slug':('title',)}
+
+
+we gonna change loaction by adding Location model which we will map to Meetups model by use relation manyTomany,...
+
+
 
 
 
