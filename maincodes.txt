@@ -125,6 +125,12 @@ succesfully ...
 after : pip install Pillow
 
 
+. at the next level we finish to configure pillow and to upload image via admin area its possible 
+.whats next we need to configure server to serve /file url to be able read image on django server here we will need to use new feature of django called 'static' 
+
+in main url eg from django.conf.urls.static import static after configure serving on server its will work on facing front end
+
+
 
 
 
