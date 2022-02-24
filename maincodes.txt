@@ -175,7 +175,10 @@ let we see on many to many  relations on Participant model
 .fitst key participart its where result got be stored because get_or_create do all to retrieve or to create excute one get or create depend on existance of form filed value in database if exists
 
 
-in model if u will have to use save() in view use forms.MofelForm but if not use forms.Forms
+.in model if u will have to use save() in view use forms.MofelForm but if not use forms.Forms this will eliminate to use save() method in view
+.next  remember to use catch & except for any issue you will guess what's issue or what's problem have happened either in codes or if you come wrong in accessing of object or properties in model or db  thus u will told eg 'Meetups' object has no attribute 'participants'
+
+
 
 
 
