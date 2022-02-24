@@ -4,7 +4,7 @@
 
 {% block title %}
 
-{{ meetup_title }}
+{{ meetup.title }}
 
 {% endblock %}
 
@@ -15,7 +15,7 @@
 
 {% block main_heading %}
 
-{{ meetup_title }}
+{{ meetup.title }}
 
 {% endblock %}
 
@@ -27,16 +27,16 @@
 
 <article>
     
-    <img src="{{ image }}">
+    <img id="main-image" src="{{ meetup.image.url }}">
    <section id="location">
        <h2>Meetup Details</h2>
-       <address>This Meetups takes place in   <span>{{ location }}</span>(ADDRESS).</address>
+       <address>This Meetups takes place in   <span>{{ meetup.location.name }}</span>({{ meetup.location.address }}).</address>
        
    </section>
 
    <section id="details">
        <h2>What's thiseetup About</h2>
-       <p>{{ meetup_description }}</p>
+       <p>{{ meetup.description }}</p>
 
 
        <footer>

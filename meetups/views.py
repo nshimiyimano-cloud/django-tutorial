@@ -51,10 +51,9 @@ def meetup_details(request,meetup_slug):
        print(selected_meetup.image.url) # will be like this /images/dress.jpg
        return render(request,"meetups/meetups-details.html",{
          "meetup_found":True,
-         "meetup_title":selected_meetup.title,
-         "meetup_description":selected_meetup.description,
-         "location":selected_meetup.location,
-         "image":selected_meetup.image.url
+         #"meetup_title":selected_meetup.title,  let we change by only get selected_mmetup object
+         #"meetup_description":selected_meetup.description,
+        "meetup":selected_meetup
 
          }
       )
