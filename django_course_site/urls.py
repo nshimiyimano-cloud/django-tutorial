@@ -18,8 +18,10 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings   # to specify folder we decided in settings.py for serveing image as static
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    path('',include('meetups.urls'))
+    path('',RedirectView.as_view(url= '/meetups/')),
+    path('meetups/',include('meetups.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

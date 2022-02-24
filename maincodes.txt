@@ -200,6 +200,11 @@ Python Path:
  '/home/lab/Desktop/learn/learndjango/django_course_site/django_course_env/lib/python3.6/site-packages']
 
 
+ * last we wrap tutorial with RedirectView so is from django.views.generic.base import RedirectView where we will use it if no slush in url it will be redirected to '/meetup' url
+ eg in main url path("",RedirectView.asview(url='/meetups)),
+ ,,,and other urls
+
+
 
 
 
