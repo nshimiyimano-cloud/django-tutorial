@@ -70,7 +70,7 @@ def meetup_details(request,meetup_slug):
             user_email=registration_form.cleaned_data['email'] # _ its like to say was_create this second param present/determine take status that alredy exist but first param or key its for to use when data there is not exist in database(just its data to be saved in database)
             partticipant, _= Participant.objects.get_or_create(email=user_email)
             selected_meetup.participant.add(partticipant) #because if we have selected_mmetup already we have participants here because we have this field in Meetups model in db
-            return redirect("confirm-registration")
+            return redirect("confirm-registration",meetup_slug=meetup_slug)
 
 
 
@@ -91,6 +91,9 @@ def meetup_details(request,meetup_slug):
 
 
 
-def confirm_registration(request):
-   return render(request,'meetups/registration-success.html')
+def confirm_registration(request,meetup_slug):
+   meetup= Meetups.objects.get(meetup_slug)
+   return render(request,'meetups/registration-success.html',{      # we do this because succes page come for this function plays role there
+      "organizer_email":meetup.organizer_email
+   }) 
 

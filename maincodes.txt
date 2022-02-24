@@ -181,7 +181,23 @@ let we see on many to many  relations on Participant model
 
 <a href="mailtto:{{meetup.organizer_email}}">contact meetup organizer</a>  mailto is not django specific when you will click on this link it will directly open mailClient
 
+full info about which where  my django app is running on django version python verson path,environment,thus give us to know interprenter from environ we are using
 
+
+
+Django Version:	3.2.12
+Exception Type:	ValueError
+Exception Value:	
+too many values to unpack (expected 2) u see this error in browser when mistype  n.Object.get(slug_param) true is to write(slug=slup_param): eg to to findby slug in function of view
+Exception Location:	/home/lab/Desktop/learn/learndjango/django_course_site/django_course_env/lib/python3.6/site-packages/django/db/models/sql/query.py, line 1283, in build_filter
+Python Executable:	/home/lab/Desktop/learn/learndjango/django_course_site/django_course_env/bin/python
+Python Version:	3.6.9
+Python Path:	
+['/home/lab/Desktop/learn/learndjango/django_course_site',
+ '/usr/lib/python36.zip',
+ '/usr/lib/python3.6',
+ '/usr/lib/python3.6/lib-dynload',
+ '/home/lab/Desktop/learn/learndjango/django_course_site/django_course_env/lib/python3.6/site-packages']
 
 
 
