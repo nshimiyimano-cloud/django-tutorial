@@ -179,6 +179,7 @@ let we see on many to many  relations on Participant model
 .next  remember to use catch & except for any issue you will guess what's issue or what's problem have happened either in codes or if you come wrong in accessing of object or properties in model or db  thus u will told eg 'Meetups' object has no attribute 'participants'
 
 
+<a href="mailtto:{{meetup.organizer_email}}">contact meetup organizer</a>  mailto is not django specific when you will click on this link it will directly open mailClient
 
 
 
